@@ -8,7 +8,8 @@ class Modal extends Component{
     //We have to be careful, because a prop may be changed and another not,
     //so maybe sometimes we need to check more than one states to pass the changed state
     shouldComponentUpdate(nextProps, nextState){
-        return nextProps.show !== this.props.show       
+    
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children       
     }
 
     componentDidUpdate(){
